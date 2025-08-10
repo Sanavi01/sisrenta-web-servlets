@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  *
- * @author sanavi   
+ * @author sanavi
  */
 public class LogicController {
 
@@ -30,8 +30,11 @@ public class LogicController {
         persisController.deleteCliente(client_id);
     }
 
+    public Cliente findClienteById(int cliente_id) {
+        return persisController.findClienteById(cliente_id);
+    }
+
     // --------------------Employee Methods --------------------------
-    
     public void createEmployee(Employee employee) {
         persisController.createEmployee(employee);
     }
@@ -47,6 +50,12 @@ public class LogicController {
     public void deleteEmployee(int employee_id) {
         persisController.deteteEmployee(employee_id);
     }
+
+    public Employee findEmployeeByUsername(String username) {
+        return persisController.findEmployeeByUsername(username);
+    }
+
+    ;
 
     // --------------------Factura Methods --------------------------
 
@@ -75,23 +84,23 @@ public class LogicController {
 
     public void switchFacturaStatus(int id) {
         Factura factura = findFacturaById(id);
-        if(factura.getState().equals("Apartado")){
+        if (factura.getState().equals("Apartado")) {
             factura.setState("Entregado");
             factura.setDeliveredDate(LocalDateTime.now());
             editFactura(factura);
-        } else if(factura.getState().equals("Entregado")){
+        } else if (factura.getState().equals("Entregado")) {
             factura.setState("Recibido");
             editFactura(factura);
         }
     }
-    
-    //----------------------Sistema de Alertas--------------------------------------
 
+    //----------------------Sistema de Alertas--------------------------------------
     public List<Factura> findAllFacturasPorEntregar() {
-        return persisController.findAllFacturasPorEntregar(); 
+        return persisController.findAllFacturasPorEntregar();
     }
 
     public List<Factura> findAllFacturasPorRecibir() {
-      return persisController.findAllFacturasPorRecibir();
+        return persisController.findAllFacturasPorRecibir();
     }
+
 }

@@ -40,6 +40,10 @@ public class PersistenceController {
             Logger.getLogger(PersistenceController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public Cliente findClienteById(int cliente_id) {
+        return clienteJpa.findCliente(cliente_id);
+    }
 
     // --------------------Employee Jpa Controller --------------------------
     EmployeeJpaController employeeJpa = new EmployeeJpaController();
@@ -66,6 +70,10 @@ public class PersistenceController {
         } catch (NonexistentEntityException ex) {
             Logger.getLogger(PersistenceController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public Employee findEmployeeByUsername(String username) {
+        return employeeJpa.findEmployeeByUsername(username);
     }
 
     // --------------------Factura Jpa Controller --------------------------

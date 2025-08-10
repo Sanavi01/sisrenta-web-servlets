@@ -1,0 +1,18 @@
+:root {
+  --color-primario: #42a5f5;
+  --color-secundario: #e3f2fd;
+  --color-texto: white;
+}
+
+html, body{
+    height: 100vh;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;  
+}

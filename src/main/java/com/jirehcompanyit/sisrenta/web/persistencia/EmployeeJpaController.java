@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -135,6 +136,22 @@ public class EmployeeJpaController implements Serializable {
             em.close();
         }
     }
+    
+    public Employee findEmployeeByUsername(String username){
+        EntityManager em = getEntityManager();
+        try {
+            return em.createQuery(
+            "SELECT e FROM Employee e WHERE e.username =:username", Employee.class)
+                    .setParameter("username", username)
+                    .getSingleResult();
+        }catch (NoResultException e){
+            return null;
+        }
+        finally {
+            em.close();
+        }
+        
+    };
 
     public int getEmployeeCount() {
         EntityManager em = getEntityManager();

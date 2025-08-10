@@ -1,0 +1,64 @@
+<style>
+    .sidebar {
+        background-color: var(--color-primario);
+        padding: 10px
+    }
+
+    .navbar,
+    .nav {
+        justify-content: center;
+    }
+
+    .hamburger {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        padding-top: 10px;
+    }
+</style>
+
+<!--Toggle -->
+<div class="navbar row gx-0">
+    <!--Nav-->
+    <div class="nav">
+        <div class="sidebar-heading mb-3">Navegacion</div>
+
+        <ul class="list-unstyled">
+            <!--Customers-->
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center" data-bs-toggle="collapse"
+                    data-bs-target="#customersMenu" aria-expanded="false" aria-controls="customersMenu">
+                    <img src="https://img.icons8.com/?size=100&id=22396&format=png&color=000000" alt="Clientes"
+                        width="30">
+                    Clientes
+                </button>
+                <!--Collapsed List-->
+                <ul class="collapse " id="customersMenu">
+                    <li><a href="../pages/CrearCliente.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1">Crear
+                            Cliente</a></li>
+                    <li><a href="../pages/BuscarCliente.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1">Buscar
+                            Cliente</a></li>
+                </ul>
+            </li>
+
+            <!--Notification System-->
+            <li class="mb-1">
+                <button class="btn btn-toggle" data-bs-toggle="collapse" data-bs-target="#alertCollapsed"
+                    aria-expanded="true" aria-controls="alertCollapsed">
+                    <img src="https://img.icons8.com/?size=100&id=40401&format=png&color=000000" alt="Notificaciones"
+                        width="24">
+                    Alertas</button>
+                <ul class="collapse" id="alertCollapsed">
+                    <li><a href="../AlertasPreparacion.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1">Alertas
+                            de Preparacion</a></li>
+                    <li><a href="../AlertasEntrega.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1">Alertas
+                            de Entrega</a> </li>
+                    <li><a href="../AlertasDevolucion.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded mb-1">Alertas
+                            de Devolucion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,2 +1,15 @@
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/persistencia/FacturaJpaController.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/persistencia/PersistenceController.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/logica/Person.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/persistencia/exceptions/NonexistentEntityException.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/logica/Cliente.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/logica/LogicController.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/logica/Employee.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/persistencia/EmployeeJpaController.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/servlets/SvCliente.java
 /mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/resources/JavaEE8Resource.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/logica/Factura.java
 /mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/JAXRSConfiguration.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/persistencia/exceptions/IllegalOrphanException.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/persistencia/ClienteJpaController.java
+/mnt/Disco-Tera/repos-git/sisrenta-web/src/main/java/com/jirehcompanyit/sisrenta/web/persistencia/exceptions/PreexistingEntityException.java

@@ -1,9 +1,11 @@
 com/jirehcompanyit/sisrenta/web/logica/Cliente.class
 com/jirehcompanyit/sisrenta/web/logica/Employee.class
+com/jirehcompanyit/sisrenta/web/servlets/SvCrearCliente.class
 com/mycompany/sisrenta_backend/persistence/exceptions/IllegalOrphanException.class
 com/jirehcompanyit/sisrenta/web/logica/Factura.class
 com/jirehcompanyit/sisrenta/web/logica/Person_.class
 com/jirehcompanyit/sisrenta/web/persistencia/PersistenceController.class
+com/jirehcompanyit/sisrenta/web/servlets/SvFactura.class
 com/jirehcompanyit/sisrenta/web/persistencia/ClienteJpaController.class
 com/jirehcompanyit/sisrenta/web/logica/Employee_.class
 com/jirehcompanyit/sisrenta/web/persistencia/FacturaJpaController.class
