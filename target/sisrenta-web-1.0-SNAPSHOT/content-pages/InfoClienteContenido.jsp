@@ -4,6 +4,7 @@
     Author     : sanavi
 --%>
 
+<%@page import="com.jirehcompanyit.sisrenta.web.logica.LogicController"%>
 <%@page import="com.jirehcompanyit.sisrenta.web.logica.Factura"%>
 <%@page import="com.jirehcompanyit.sisrenta.web.logica.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -57,26 +58,27 @@
                         <a href="../pages/CrearFactura.jsp" class="btn btn-primary">Crear Factura</a>
                     </div>
                 </div>
-            </div>
+            </div>                    
             <div class="FacturasCliente col pb-3">
                 <div class="card shadow p-3" style="gap: 20px;">
                     <h3>Facturas</h3>
                     <% for (Factura facturaCliente : cliente.getListaFacturas()) {
-
-
+                            System.out.println(facturaCliente.getDescription());
                     %>
                     <div class="card p-2 factura">
                         <div class="row">
                             <div class="col-4 border-end">
-                                <p>Factura <%= facturaCliente.getId() %></p>
-                                <p>Fecha: <%= facturaCliente.getCreationDate() %></p>
-                                <p>Status: <%= facturaCliente.getState() %></p>
+                                <p>Factura <%= facturaCliente.getId()%></p>
+                                <p>Fecha: <%= facturaCliente.getCreationDate()%></p>
+                                <p>Status: <%= facturaCliente.getState()%></p>
                             </div>
                             <div class="col">
                                 <p><b>Resumen</b></p>
-                                <p><%= facturaCliente.getDescription() %></p>
+                                <p><%= facturaCliente.getDescription()%></p>
                                 <div style="display: flex; justify-content: center;">
-                                    <a href="Facturas.html" class="btn btn-primary">Factura</a>
+                                    <form method="GET" action="${pageContext.request.contextPath}/pages/SvFactura">
+                                        <button type="submit" class="btn btn-primary" value="<%= facturaCliente.getId()%>" name="factura_id">Factura</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

@@ -4,11 +4,14 @@ import com.jirehcompanyit.sisrenta.web.logica.Cliente;
 import com.jirehcompanyit.sisrenta.web.logica.Factura;
 import com.jirehcompanyit.sisrenta.web.logica.LogicController;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -25,7 +28,15 @@ public class SvFactura extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        LogicController logicController = new LogicController();
+        
+        int factura_id = Integer.parseInt(request.getParameter("factura_id"));
+        Factura factura = logicController.findFacturaById(factura_id);
+        
+        HttpSession session = request.getSession();
+        
+        session.setAttribute("factura", factura);
+        request.getRequestDispatcher("/pages/Factura.jsp").forward(request, response);
     }
 
     @Override
@@ -52,9 +63,18 @@ public class SvFactura extends HttpServlet {
         factura.setCreditValue(creditValue);
         factura.setDepositValue(depositValue);
         factura.setState(status);
+        
+        
+        
+        List<Factura> listaFacturas = cliente.getListaFacturas();
+        listaFacturas.add(factura);
+        
+        cliente.setListaFacturas(listaFacturas);
 
         logicController.createFactura(factura);
-
+        logicController.editCliente(cliente);
+        
+        request.getRequestDispatcher("/pages/InfoCliente.jsp").forward(request, response);
     }
 
     @Override

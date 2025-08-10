@@ -73,7 +73,7 @@
                 <div class="mb-3">
                     <label for="status" class="form-label"><strong>Status</strong></label>
                     <select class="form-select" id="status" name="status" required>
-                        <option value="por_entregar" selected>Por Entregar</option>
+                        <option value="apartado" selected>Apartado</option>
                         <option value="entregado">Entregado</option>
                         <option value="devuelto">Devuelto</option>
                     </select>
