@@ -9,7 +9,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     Factura factura = (Factura) session.getAttribute("factura");
-    Cliente cliente = (Cliente) session.getAttribute("cliente");
+    Cliente clienteFactura = factura.getCliente();
 %>
 <!DOCTYPE html>
 <style>
@@ -46,8 +46,8 @@
         <h1 style="margin-bottom: 20px;">Facturas</h1>
         <div class="card shadow p-3">
             <div class="">
-                <p><b>Cliente:</b> <%= cliente.getName() + " " + cliente.getLastName()%></p>
-                <p><b>Celular:</b> <%= cliente.getPhoneNumber()%></p>
+                <p><b>Cliente:</b> <%= clienteFactura.getName() + " " + clienteFactura.getLastName()%></p>
+                <p><b>Celular:</b> <%= clienteFactura.getPhoneNumber()%></p>
             </div>
             <div class="border-bottom">
                 <p><b>Descripcion:</b></p>
