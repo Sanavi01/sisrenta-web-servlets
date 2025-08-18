@@ -10,6 +10,18 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * Representa un cliente en el sistema. Esta clase hereda de {@link Person} y
+ * contiene la información específica de un cliente, incluyendo sus facturas
+ * asociadas.
+ *
+ * <p>
+ * Un cliente puede tener múltiples facturas asociadas mediante una relación de
+ * uno a muchos (OneToMany). Además, la clase implementa {@link Serializable}
+ * para permitir su persistencia y transmisión.</p>
+ *
+ * @author Santiago Angarita
+ */
 @Entity
 @SequenceGenerator(
         name = "cliente_seq",
@@ -23,9 +35,16 @@ public class Cliente extends Person implements Serializable {
             generator = "cliente_seq")
     private int client_id;
 
+    /**
+     * Lista de facturas asociadas al cliente.
+     *
+     * 
+     * Relación uno a muchos con la entidad {@link Factura}. El cliente puede
+     * tener múltiples facturas, y si se elimina el cliente, sus facturas
+     * también serán eliminadas automáticamente.
+     */
     
-    //private LinkedList<Factura> listaFacturas;
-    @OneToMany (mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Factura> listaFacturas;
 
     public Cliente() {

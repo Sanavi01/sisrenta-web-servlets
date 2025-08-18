@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Clase que reune todos los Jpa Controller con el fin de solo llamar una clase y no todas, permitiendo conectar la logica con la capa de datos
  *
  * @author sanavi
  */

@@ -2,6 +2,40 @@
     Document   : AlertaPreparacionContenido
     Created on : Aug 10, 2025, 4:20:44 PM
     Author     : sanavi
+
+ Descripción:
+    ------------
+    Página de contenido para la sección de "Alertas - Por Preparar" del sistema SISRENTA.
+    Muestra todas las facturas que están pendientes de preparación para su entrega, con 
+    información resumida y botones para acceder a los detalles de cada factura.
+
+    Funcionalidad:
+    ---------------
+    - Obtiene la lista de facturas pendientes de preparar mediante LogicController.
+    - Para cada factura:
+        - Muestra ID de la factura.
+        - Fecha de creación.
+        - Estado actual.
+        - Descripción / resumen de la factura.
+        - Botón que redirige al servlet SvFactura para ver los detalles completos de la factura.
+
+    Estructura:
+    -----------
+    - Contenedor principal (.right-side) que contiene la barra superior y el contenido principal.
+    - Barra superior (.top-menu) con botón de menú y título "SISRENTA".
+    - Contenido principal (.main-content) con:
+        - Título de la sección.
+        - Tarjetas (.card) para cada factura pendiente, usando borde verde para resaltar.
+    - Cada tarjeta tiene dos columnas:
+        1. Información general de la factura.
+        2. Resumen y botón para ver detalles.
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - JSP estándar con scriptlets para iterar sobre la lista de facturas.
+    - CSS inline para estilos específicos de la sección.
+    - Bootstrap 5 para diseño y componentes visuales (cards, botones, grids).
+    - Formularios GET para enviar el ID de la factura al servlet SvFactura.
 --%>
 
 <%@page import="java.util.List"%>

@@ -17,6 +17,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 /**
+ * Clase que contiene todos los metodos que conectan directamente con la base de datos
  *
  * @author sanavi
  */

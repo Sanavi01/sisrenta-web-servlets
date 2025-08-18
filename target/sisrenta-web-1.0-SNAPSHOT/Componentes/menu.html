@@ -1,3 +1,54 @@
+<!-- 
+    Document   : menu.html
+    Created on : 2025
+    Author     : sanavi
+
+    Descripción:
+    ------------
+    Menú lateral de navegación del sistema SISRENTA. 
+    Se carga dinámicamente en todas las páginas internas mediante <jsp:include> o fetch() en JavaScript.
+
+    Funcionalidad:
+    ---------------
+    - Permite la navegación entre las secciones principales:
+        - Clientes:
+            - Crear Cliente
+            - Buscar Cliente
+        - Alertas:
+            - Alertas de Preparación
+            - Alertas de Devolución
+    - Utiliza listas colapsables de Bootstrap para agrupar opciones.
+    - Incluye iconos representativos para cada sección.
+    - Mantiene la consistencia visual con el tema principal de la aplicación.
+
+    Estructura:
+    -----------
+    - Contenedor principal (.navbar.row.gx-0) que envuelve todo el menú.
+    - Sección de navegación (.nav):
+        - Título de sección: "Navegación".
+        - Lista de elementos principales (ul.list-unstyled):
+            - Clientes:
+                - Botón colapsable con icono.
+                - Submenú con enlaces a Crear y Buscar Cliente.
+            - Alertas:
+                - Botón colapsable con icono.
+                - Submenú con enlaces a Alertas de Preparación y Alertas de Devolución.
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - HTML5 y CSS3.
+    - Bootstrap 5 para el sistema de colapsables y diseño de botones.
+    - Iconos de https://icons8.com.
+
+    Consideraciones:
+    ----------------
+    - Se incluye dinámicamente en las páginas mediante:
+        - JSP: `<jsp:include page="../Componentes/menu.html" />`
+        - JS: `fetch('../Componentes/menu.html').then(...)`
+    - No tiene interacción directa con la base de datos.
+    - Mantiene la consistencia visual y la navegación intuitiva para el usuario.
+-->
+
 <style>
     .sidebar {
         background-color: var(--color-primario);

@@ -2,6 +2,35 @@
     Document   : landing
     Created on : Aug 6, 2025, 2:05:07 PM
     Author     : sanavi
+    
+    Descripción:
+    ------------
+    Página principal de aterrizaje del sistema SISRENTA luego de iniciar sesión.
+    Su propósito es mostrar un dashboard o contenido dinámico personalizado
+    al usuario autenticado.
+
+    Estructura:
+    ------------
+    - Wrapper principal que ocupa toda la ventana del navegador.
+    - Menú lateral cargado dinámicamente mediante fetch desde '../Componentes/menu.html'.
+    - Contenido principal cargado dinámicamente desde '../content-pages/landing-content.jsp'.
+    - Footer cargado dinámicamente desde '../Componentes/footer.html'.
+    
+    Tecnologías y dependencias:
+    ---------------------------
+    - HTML5 y Bootstrap 5.3.7 para maquetación y estilos.
+    - CSS propio desde ../styles/global.css.
+    - Scripts de Bootstrap desde CDN para funcionalidades interactivas.
+    - JavaScript nativo para inyectar dinámicamente menú, contenido y footer.
+    - Diseño responsive mediante clases de Bootstrap y estructura flexible.
+    
+    Funcionamiento:
+    ----------------
+    1. La página está dividida en menú lateral y área de contenido principal.
+    2. Mediante fetch, se cargan los componentes reutilizables (menú y footer)
+       y el contenido específico del landing page.
+    3. Esto permite modularidad y facilidad de mantenimiento, ya que cada componente
+       se puede actualizar independientemente.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

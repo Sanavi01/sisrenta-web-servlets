@@ -6,6 +6,9 @@ import java.util.List;
 
 /**
  *
+ * Esta clase reune los metodos para la comunicacion entre la vista
+ * y la persistencia, teniendo todos en uno para llamar una sola clase,
+ * 
  * @author sanavi
  */
 public class LogicController {
@@ -54,8 +57,6 @@ public class LogicController {
     public Employee findEmployeeByUsername(String username) {
         return persisController.findEmployeeByUsername(username);
     }
-
-    ;
 
     // --------------------Factura Methods --------------------------
 

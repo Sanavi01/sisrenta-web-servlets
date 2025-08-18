@@ -2,6 +2,36 @@
     Document   : index
     Created on : Aug 5, 2025, 12:33:58 PM
     Author     : sanavi
+
+    Descripción:
+    ------------
+    Página principal de inicio de sesión del sistema SISRENTA.
+    Permite a los usuarios autenticarse ingresando su nombre de usuario
+    y contraseña.
+
+    Estructura:
+    ------------
+    - División principal en dos columnas:
+        1. Lado izquierdo con el logo de la empresa.
+        2. Lado derecho con el formulario de login.
+    - Formulario de login con campos:
+        - Usuario
+        - Contraseña
+    - Botón para enviar credenciales al servlet SvCliente mediante POST.
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - HTML5 y Bootstrap 5.3.7 para maquetación y estilos.
+    - CSS propio desde styles/global.css.
+    - Diseño responsive mediante media queries y clases de Bootstrap.
+    
+    Funcionamiento:
+    ----------------
+    1. La página se divide en dos columnas adaptables según tamaño de pantalla.
+    2. El lado izquierdo muestra el logo de SISRENTA.
+    3. El lado derecho contiene el formulario de login, que envía los datos al
+       servlet SvCliente para validar credenciales.
+    4. Bootstrap y media queries aseguran diseño responsive en móviles y tabletas.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

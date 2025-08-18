@@ -3,6 +3,12 @@ package com.jirehcompanyit.sisrenta.web.logica;
 
 import javax.persistence.MappedSuperclass;
 
+/**
+ * Clase abstracta que permite dar los datos basicos para las clases de Cliente, employee
+ * 
+ * @author Sanavi
+ */
+
 @MappedSuperclass
 public abstract class Person {
         
@@ -20,8 +26,6 @@ public abstract class Person {
         this.phoneNumber = phoneNumber;
         this.homeAddress = homeAddress;
     }
-
-    
     
     public String getName() {
         return name;

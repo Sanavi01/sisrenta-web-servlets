@@ -2,6 +2,38 @@
     Document   : landing-content
     Created on : Aug 8, 2025, 6:03:38 PM
     Author     : sanavi
+
+    Descripción:
+    ------------
+    Página de contenido principal de bienvenida del sistema SISRENTA.
+    Se muestra al iniciar sesión y sirve como landing page para orientar al usuario.
+
+    Funcionalidad:
+    ---------------
+    - Contenedor principal de contenido derecho (.right-side) con barra superior.
+    - Barra superior (.top-menu) con botón para colapsar el menú lateral y título "SISRENTA".
+    - Contenido principal (.main-content) con mensaje de bienvenida:
+        - Mensaje de saludo centralizado.
+        - Breve descripción del sistema como software de renta online.
+        - Indicaciones sobre el menú de navegación a la izquierda.
+
+    Estructura:
+    -----------
+    - Contenedor principal (.right-side) con padding y fondo blanco.
+    - Barra superior (.top-menu) consistente con otras páginas internas.
+    - Contenido de bienvenida (.main-content) dentro de un card de Bootstrap con sombra y padding.
+    - Texto centrado mediante flexbox (.welcome).
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - JSP estándar para renderizar la página.
+    - CSS inline para estilos específicos.
+    - Bootstrap 5 para diseño de card, sombras y layout.
+
+    Consideraciones:
+    ----------------
+    - No interactúa con la base de datos ni con la sesión.
+    - Sirve únicamente como guía visual y orientación inicial para el usuario.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

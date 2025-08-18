@@ -10,6 +10,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * Representa una factura dentro del sistema de gestión de rentas.
+ *
+ * La factura almacena información sobre el estado de la transacción, fechas
+ * relevantes del proceso de renta, valores económicos asociados, así como las
+ * relaciones con el {@link Cliente} y el {@link Employee} responsables.
+ *
+ * @author Sanavi
+ */
 @Entity
 @SequenceGenerator(name = "invoice_seq",
         allocationSize = 1,
@@ -42,14 +51,27 @@ public class Factura implements Serializable {
     private int creditValue;
     private int depositValue;
 
+    /**
+     * Cliente asociado a la factura.
+     *
+     * <p>
+     * Relación muchos a uno: una factura pertenece a un único cliente, pero un
+     * cliente puede tener múltiples facturas.</p>
+     */
     @ManyToOne
     @JoinColumn(name = "client_id") // crea la columna cliente_id en factura
     private Cliente cliente;
-    
+
+    /**
+     * Empleado asociado a la factura.
+     *
+     * <p>
+     * Relación muchos a uno: una factura pertenece a un único empleado, pero un
+     * empleado puede gestionar múltiples facturas.</p>
+     */
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
-
 
     public Factura() {
     }

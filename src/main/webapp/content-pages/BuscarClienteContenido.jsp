@@ -2,6 +2,37 @@
     Document   : BuscarClienteContenido
     Created on : Aug 8, 2025, 9:47:42 PM
     Author     : sanavi
+
+    Descripción:
+    ------------
+    Página de contenido para la sección de "Buscar Cliente" del sistema SISRENTA.
+    Permite al usuario ingresar un número de celular para buscar la información de un cliente
+    existente en la base de datos.
+
+    Funcionalidad:
+    ---------------
+    - Contiene un formulario que envía el número de celular ingresado al servlet SvCrearCliente.
+    - Al enviar el formulario:
+        - Se ejecuta la lógica para buscar el cliente por su número de celular.
+        - Se redirige a la página de información del cliente (InfoCliente.jsp) si se encuentra.
+    - Uso de método GET para enviar el parámetro "phoneNumber".
+
+    Estructura:
+    -----------
+    - Contenedor principal (.right-side) con barra superior y contenido principal.
+    - Barra superior (.top-menu) con botón de menú y título "SISRENTA".
+    - Contenido principal (.main-content) con:
+        - Título de la sección "Buscar cliente".
+        - Tarjeta (.card) que contiene:
+            - Indicaciones al usuario sobre cómo buscar.
+            - Formulario de búsqueda con campo de texto y botón.
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - JSP estándar para renderizar la página.
+    - CSS inline para estilos específicos.
+    - Bootstrap 5 para diseño y componentes visuales (cards, botones, grids, formularios).
+    - Formulario HTML que envía datos al servlet SvCrearCliente para procesamiento.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

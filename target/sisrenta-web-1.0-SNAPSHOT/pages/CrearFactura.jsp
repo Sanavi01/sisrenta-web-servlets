@@ -2,6 +2,32 @@
     Document   : CrearFactura
     Created on : Aug 9, 2025, 2:43:10 PM
     Author     : sanavi
+
+ Descripción:
+    ------------
+    Página JSP del sistema SISRENTA encargada de mostrar la interfaz para la
+    creación de facturas de clientes.
+
+    Estructura:
+    ------------
+    - Wrapper principal que ocupa toda la ventana del navegador.
+    - Menú lateral reutilizable mediante <jsp:include page="../Componentes/menu.html" />.
+    - Contenido principal cargado dinámicamente desde
+      <jsp:include page="../content-pages/CrearFacturaContenido.jsp" />.
+    - Footer reutilizable mediante <jsp:include page="../Componentes/footer.html" />.
+    
+    Tecnologías y dependencias:
+    ---------------------------
+    - HTML5 y Bootstrap 5.3.7 para maquetación y estilos.
+    - CSS propio desde ../styles/global.css.
+    - Scripts de Bootstrap desde CDN para funcionalidades interactivas.
+    - Diseño responsive mediante meta viewport y clases de Bootstrap.
+    
+    Funcionamiento:
+    ----------------
+    1. El menú lateral permite navegación dentro del sistema.
+    2. El contenido principal corresponde a la vista de creación de facturas.
+    3. El footer se mantiene constante en todas las páginas del sistema.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

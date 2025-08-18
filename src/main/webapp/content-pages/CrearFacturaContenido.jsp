@@ -2,6 +2,46 @@
     Document   : CrearFacturaContenido
     Created on : Aug 9, 2025, 2:43:18 PM
     Author     : sanavi
+
+    Descripción:
+    ------------
+    Página de contenido para la sección de "Crear Factura" del sistema SISRENTA.
+    Permite al usuario registrar una nueva factura asociada a un cliente específico.
+
+    Funcionalidad:
+    ---------------
+    - Recupera el objeto Cliente desde la sesión para asociarlo a la factura.
+    - Contiene un formulario que envía los datos de la factura al servlet SvFactura mediante POST.
+    - Campos del formulario:
+        - Descripción de la factura
+        - Recomendaciones
+        - Valor de Renta
+        - Crédito
+        - Depósito
+        - Status (Apartado, Entregado, Devuelto)
+    - Al enviar el formulario:
+        - Se crea una nueva factura asociada al cliente en la base de datos.
+        - Se redirige a la página de información del cliente (InfoCliente.jsp).
+
+    - El campo `cliente_id` se oculta en el formulario y se obtiene del cliente en sesión.
+    - El botón "Crear Factura" envía los datos mediante POST al servlet correspondiente.
+
+    Estructura:
+    -----------
+    - Contenedor principal (.right-side) con barra superior y contenido principal.
+    - Barra superior (.top-menu) con botón de menú y título "SISRENTA".
+    - Contenido principal (.main-content) con:
+        - Título de la sección "Crear Factura".
+        - Tarjeta (.card) que contiene el formulario de registro de factura.
+        - Botón para enviar los datos y crear la factura.
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - JSP estándar para renderizar la página.
+    - CSS inline para estilos específicos.
+    - Bootstrap 5 para diseño y componentes visuales (cards, botones, grids, formularios).
+    - Formulario HTML que envía datos al servlet SvFactura mediante POST.
+
 --%>
 
 <%@page import="com.jirehcompanyit.sisrenta.web.logica.Cliente"%>

@@ -2,6 +2,41 @@
     Document   : FacturaContenido
     Created on : Aug 9, 2025, 7:18:11 PM
     Author     : sanavi
+
+    Descripción:
+    ------------
+    Página de contenido para la sección de "Facturas" en el sistema SISRENTA.
+    Permite visualizar la información detallada de una factura específica junto con los datos del cliente asociado.
+
+    Funcionalidad:
+    ---------------
+    - Recupera el objeto Factura desde la sesión.
+    - Obtiene el Cliente asociado a la factura.
+    - Muestra los siguientes datos:
+        - Cliente: Nombre, Apellido y Celular.
+        - Descripción de la factura.
+        - Recomendaciones adicionales (si existen).
+        - Valores financieros: Valor de renta, Crédito y Depósito.
+        - Fechas: Creación, Entrega y Devolución.
+        - Estado de la factura.
+    - El estado se muestra en un botón deshabilitado con estilo de Bootstrap.
+
+    Estructura:
+    -----------
+    - Contenedor principal (.right-side) con barra superior y contenido principal.
+    - Barra superior (.top-menu) con botón de menú y título "SISRENTA".
+    - Contenido principal (.main-content) con:
+        - Título de la sección "Facturas".
+        - Tarjeta (.card) que contiene la información del cliente y la factura.
+        - Distribución de la información en secciones y filas (rows) para mayor claridad visual.
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - JSP estándar para renderizar la página.
+    - CSS inline para estilos específicos.
+    - Bootstrap 5 para diseño y componentes visuales (cards, botones, grids).
+    - Los datos se cargan desde la sesión y se muestran dinámicamente usando scriptlets JSP.
+
 --%>
 
 <%@page import="com.jirehcompanyit.sisrenta.web.logica.Cliente"%>

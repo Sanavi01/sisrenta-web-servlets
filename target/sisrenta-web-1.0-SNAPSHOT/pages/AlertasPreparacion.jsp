@@ -2,6 +2,34 @@
     Document   : AlertasPreparacion
     Created on : Aug 10, 2025, 4:20:31 PM
     Author     : sanavi
+
+ Descripción:
+    ------------
+    Página JSP del sistema SISRENTA encargada de mostrar alertas de preparación
+    de productos o servicios alquilados.
+
+    Estructura:
+    ------------
+    - Wrapper principal que ocupa toda la ventana del navegador.
+    - Menú lateral reutilizable mediante <jsp:include page="../Componentes/menu.html" />.
+    - Contenido dinámico principal cargado desde
+      <jsp:include page="../content-pages/AlertaPreparacionContenido.jsp" />.
+    - Footer reutilizable mediante <jsp:include page="../Componentes/footer.html" />.
+    
+    Tecnologías y dependencias:
+    ---------------------------
+    - HTML5 y Bootstrap 5.3.7 para maquetación y estilos.
+    - CSS propio desde ../styles/global.css.
+    - Scripts de Bootstrap desde CDN para funcionalidades interactivas.
+    - Diseño responsive mediante meta viewport y clases de Bootstrap.
+    
+    Funcionamiento:
+    ----------------
+    1. El menú lateral permite navegación dentro del sistema.
+    2. El contenido principal se genera dinámicamente a través del JSP
+       incluido, mostrando la alerta de preparación correspondiente.
+    3. El footer se mantiene constante en todas las páginas del sistema.
+
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

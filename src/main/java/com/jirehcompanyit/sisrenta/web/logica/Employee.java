@@ -12,6 +12,19 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * Representa a un empleado en el sistema.
+ * 
+ * La clase hereda de {@link Person} e implementa {@link Serializable}.
+ * Contiene la información específica de los empleados como credenciales de acceso,
+ * número de identificación y la lista de facturas que gestiona.
+ * 
+ * Existe una relación de uno a muchos con la entidad {@link Factura}, lo que indica
+ * que un empleado puede estar asociado a múltiples facturas. 
+ * Si el empleado es eliminado, sus facturas también serán eliminadas.
+ * 
+ * @author Sanavi
+ */
 
 @Entity
 @SequenceGenerator(
@@ -24,10 +37,18 @@ public class Employee extends Person implements Serializable{
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
             generator = "employee_seq")
     private int employee_id;
+    
     @Basic
     private String username;
     private String password;
     private String identificationNumber;
+    
+    /**
+     * Lista de facturas asociadas al empleado.
+     * 
+     * Relación uno a muchos con la entidad {@link Factura}. 
+     * Indica todas las facturas gestionadas por este empleado.
+     */
 
     @OneToMany (mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Factura> listaFacturas;
@@ -83,9 +104,4 @@ public class Employee extends Person implements Serializable{
     public void setListaFacturas(List<Factura> listaFacturas) {
         this.listaFacturas = listaFacturas;
     }
-
-    
-    
-    
-    
 }

@@ -2,6 +2,43 @@
     Document   : InfoClienteContenido
     Created on : Aug 8, 2025, 10:11:55 PM
     Author     : sanavi
+
+    Descripción:
+    ------------
+    Página de contenido para la sección de "Información del Cliente" en el sistema SISRENTA.
+    Permite visualizar los datos personales de un cliente y sus facturas asociadas.
+
+    Funcionalidad:
+    ---------------
+    - Recupera el objeto Cliente desde la sesión.
+    - Muestra la información personal del cliente:
+        - Nombre
+        - Apellidos
+        - Número de celular
+        - Dirección
+    - Permite crear una nueva factura para el cliente mediante un botón que redirige a CrearFactura.jsp.
+    - Lista todas las facturas asociadas al cliente, mostrando para cada una:
+        - ID de la factura
+        - Fecha de creación
+        - Estado
+        - Resumen/Descripción
+        - Botón que redirige a la visualización de la factura específica (SvFactura).
+
+    Estructura:
+    -----------
+    - Contenedor principal (.right-side) con barra superior y contenido principal.
+    - Barra superior (.top-menu) con botón de menú y título "SISRENTA".
+    - Contenido principal (.main-content) dividido en dos columnas:
+        - Columna de Información del Cliente (.InfoCliente)
+        - Columna de Facturas del Cliente (.FacturasCliente)
+    - Cada factura se representa como una tarjeta (.card) con información distribuida en filas y columnas para mayor claridad.
+
+    Tecnologías y dependencias:
+    ---------------------------
+    - JSP estándar para renderizar la página.
+    - CSS inline para estilos específicos.
+    - Bootstrap 5 para diseño y componentes visuales (cards, botones, grids).
+    - Scriptlets JSP para iterar sobre las facturas del cliente y mostrar dinámicamente la información.
 --%>
 
 <%@page import="com.jirehcompanyit.sisrenta.web.logica.LogicController"%>

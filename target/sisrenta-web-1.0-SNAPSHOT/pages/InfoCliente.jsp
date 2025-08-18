@@ -2,6 +2,35 @@
     Document   : InfoCliente
     Created on : Aug 9, 2025, 11:33:02 AM
     Author     : sanavi
+
+    Descripción:
+    ------------
+    Página JSP del sistema SISRENTA encargada de mostrar la información detallada
+    de un cliente específico, incluyendo sus datos personales y las facturas
+    asociadas.
+
+    Estructura:
+    ------------
+    - Wrapper principal que ocupa toda la ventana del navegador.
+    - Menú lateral reutilizable mediante <jsp:include page="../Componentes/menu.html" />.
+    - Contenido principal cargado dinámicamente desde
+      <jsp:include page="../content-pages/InfoClienteContenido.jsp" />.
+    - Footer reutilizable mediante <jsp:include page="../Componentes/footer.html" />.
+    
+    Tecnologías y dependencias:
+    ---------------------------
+    - HTML5 y Bootstrap 5.3.7 para maquetación y estilos.
+    - CSS propio desde ../styles/global.css.
+    - Scripts de Bootstrap desde CDN para funcionalidades interactivas.
+    - Diseño responsive mediante meta viewport y clases de Bootstrap.
+    
+    Funcionamiento:
+    ----------------
+    1. El menú lateral permite la navegación dentro del sistema.
+    2. El contenido principal muestra la información detallada del cliente,
+       incluyendo datos personales y facturas.
+    3. El footer se mantiene constante en todas las páginas del sistema.
+
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
